@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Tap Rush — Arcade Reflex Game</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Tap Rush home"><span class="brand-mark">✦</span> TAP<span>RUSH</span></a>
+      <div class="best-pill">🏆 BEST <strong id="best">0</strong></div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">THE 30-SECOND REFLEX CHALLENGE</p>
+      <h1>Ready, set,<br><span>tap.</span></h1>
+      <p class="intro">Targets pop up. You tap them. The clock is ticking.<br>How high can you score?</p>
+    </section>
+
+    <section class="game-card" aria-live="polite">
+      <div class="stats">
+        <div><span class="stat-label">SCORE</span><strong id="score">0</strong></div>
+        <div class="timer-wrap"><span class="stat-label">TIME LEFT</span><strong id="time">30<span>s</span></strong></div>
+        <div class="streak-wrap"><span class="stat-label">STREAK</span><strong id="streak">×0</strong></div>
+      </div>
+      <div class="arena" id="arena">
+        <div class="start-panel" id="startPanel">
+          <div class="target-preview">✦</div>
+          <h2>Make every tap count</h2>
+          <p>Hit the glowing targets before they disappear.</p>
+          <button class="primary-btn" id="startBtn">PLAY NOW <span>→</span></button>
+          <small>30 seconds · Endless replay · Just one more round</small>
+        </div>
+        <div class="countdown hidden" id="countdown"></div>
+        <div class="end-panel hidden" id="endPanel">
+          <div class="result-icon">⚡</div>
+          <p class="eyebrow">TIME'S UP</p>
+          <h2><span id="finalScore">0</span> <small>POINTS</small></h2>
+          <p id="resultMessage">Nice run. Ready for another?</p>
+          <button class="primary-btn" id="againBtn">PLAY AGAIN <span>↻</span></button>
+        </div>
+      </div>
+      <div class="card-footer"><span><i class="dot"></i> TARGETS ARE LIVE</span><span>CLICK OR TAP TO SCORE</span></div>
+    </section>
+    <footer>Built for quick breaks. Powered by your reflexes.</footer>
+  </main>
+  <script src="/game.js"></script>
+</body>
+</html>
